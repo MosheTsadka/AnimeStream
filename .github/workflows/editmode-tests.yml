@@ -2,15 +2,29 @@ name: Edit-Mode Tests
 
 on:
   push:
+<<<<<<< Updated upstream
     branches: [ develop, main ]
   pull_request:
     branches: [ develop, main ]
+=======
+    branches:
+      - develop
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
+>>>>>>> Stashed changes
 
 jobs:
   edit-mode-tests:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< Updated upstream
       - name: Checkout repo
+=======
+      - name: Checkout repository
+>>>>>>> Stashed changes
         uses: actions/checkout@v3
 
       - name: Set up Unity
@@ -23,7 +37,11 @@ jobs:
         with:
           unityLicense: ${{ secrets.UNITY_LICENSE }}
 
+<<<<<<< Updated upstream
       - name: Run Edit-Mode tests
+=======
+      - name: Run Edit Mode tests
+>>>>>>> Stashed changes
         uses: game-ci/unity-test-runner@v2
         with:
           testMode: editmode
