@@ -16,7 +16,12 @@ jobs:
       - name: Set up Unity
         uses: game-ci/unity-setup@v2
         with:
-          unityVersion: <6000.0.26f1>
+          unityVersion: 6000.0.26f1
+
+      - name: Activate Unity license
+        uses: game-ci/unity-activate-license@v2
+        with:
+          unityLicense: ${{ secrets.UNITY_LICENSE }}
 
       - name: Run Edit-Mode tests
         uses: game-ci/unity-test-runner@v2
