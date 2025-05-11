@@ -28,7 +28,11 @@ jobs:
     steps:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       - name: Checkout repo
+=======
+      - name: Checkout repository
+>>>>>>> Stashed changes
 =======
       - name: Checkout repository
 >>>>>>> Stashed changes
@@ -49,7 +53,11 @@ jobs:
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       - name: Run Edit-Mode tests
+=======
+      - name: Run Edit Mode tests
+>>>>>>> Stashed changes
 =======
       - name: Run Edit Mode tests
 >>>>>>> Stashed changes
