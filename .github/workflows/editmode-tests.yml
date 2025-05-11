@@ -1,0 +1,24 @@
+name: Edit-Mode Tests
+
+on:
+  push:
+    branches: [ develop, main ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  edit-mode-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Unity
+        uses: game-ci/unity-setup@v2
+        with:
+          unityVersion: <6000.0.26f1>
+
+      - name: Run Edit-Mode tests
+        uses: game-ci/unity-test-runner@v2
+        with:
+          testMode: editmode
